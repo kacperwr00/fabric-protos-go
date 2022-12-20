@@ -405,6 +405,8 @@ type ChannelHeader struct {
 	// 1. the epoch specified in the message is the current epoch
 	// 2. this message has been only seen once during this epoch (i.e. it hasn't
 	//    been replayed)
+	// Note that the Epoch system is not fully implemented yet 
+	// go SDK sets it to the hard-coded value of 0 and contains TODO markers
 	Epoch uint64 `protobuf:"varint,6,opt,name=epoch,proto3" json:"epoch,omitempty"`
 	// Extension that may be attached based on the header type
 	Extension []byte `protobuf:"bytes,7,opt,name=extension,proto3" json:"extension,omitempty"`
